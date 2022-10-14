@@ -1,0 +1,1580 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/toys/protos/RubberDuck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/solids/protos/SolidTorus.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.376180813396691 -0.25415520591593443 -0.8910068052142097 4.25678473567501
+  position 5.208238603386363 -13.391917640725746 13.42360413764168
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation 0 1 0 0
+  floorSize 20 20
+  floorAppearance Parquetry {
+    type "dark strip"
+  }
+  wallHeight 0.11
+}
+TexturedBackground {
+  texture "noon_building_overcast"
+}
+DEF 🏆GAME_FIELD🏆 Group {
+  children [
+    DEF 🍩RINGS🍩 Group {
+    }
+    DEF 🚧BORDERS🚧 Group {
+      children [
+        Solid {
+          translation 0 -2.45 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.713726 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.025 1.9 0.52
+              }
+            }
+          ]
+          name "BORDER_CENTER_AREA_RED_RIGHT"
+          locked TRUE
+        }
+        Solid {
+          translation 0 2.45 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.713726 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.025 1.9 0.52
+              }
+            }
+          ]
+          name "BORDER_CENTER_AREA_RED_LEFT"
+          locked TRUE
+        }
+        Solid {
+          translation 0 -4.975 0
+          children [
+            DEF BASE_SEPARATOR Shape {
+              appearance PBRAppearance {
+                baseColor 0.705882 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.025 1.975 0.12
+              }
+            }
+          ]
+          name "BORDER_SEPARATOR_RED_RIGHT"
+          boundingObject USE BASE_SEPARATOR
+          locked TRUE
+        }
+        Solid {
+          translation 0 4.975 0
+          children [
+            DEF BASE_SEPARATOR Shape {
+              appearance PBRAppearance {
+                baseColor 0.705882 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.025 1.975 0.12
+              }
+            }
+          ]
+          name "BORDER_SEPARATOR_RED_LEFT"
+          boundingObject USE BASE_SEPARATOR
+          locked TRUE
+        }
+        Solid {
+          translation 2.4875 4 0
+          children [
+            DEF BORDER_BASE_SMALLEST Shape {
+              appearance PBRAppearance {
+                baseColor 0.709804 0.356863 0.129412
+                roughness 0.1
+              }
+              geometry Box {
+                size 3.05 0.025 0.12
+              }
+            }
+          ]
+          name "BORDER_BASE_SMALLEST_BLUE"
+          boundingObject USE BORDER_BASE_SMALLEST
+          locked TRUE
+        }
+        Solid {
+          translation -2.4875 -4 0
+          children [
+            DEF BORDER_BASE_SMALLEST Shape {
+              appearance PBRAppearance {
+                baseColor 0.709804 0.356863 0.129412
+                roughness 0.1
+              }
+              geometry Box {
+                size 3.05 0.025 0.12
+              }
+            }
+          ]
+          name "BORDER_BASE_SMALLEST_RED"
+          boundingObject USE BORDER_BASE_SMALLEST
+          locked TRUE
+        }
+        Solid {
+          translation 2 -4 0
+          children [
+            DEF BORDER_BASE_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.713726 0.352941 0.129412
+                roughness 0.1
+              }
+              geometry Box {
+                size 4.025 0.025 0.12
+              }
+            }
+          ]
+          name "BORDER_BASE_SMALL_BLUE"
+          boundingObject USE BORDER_BASE_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation -2 4 0
+          children [
+            DEF BORDER_BASE_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.713726 0.352941 0.129412
+                roughness 0.1
+              }
+              geometry Box {
+                size 4.025 0.025 0.12
+              }
+            }
+          ]
+          name "BORDER_BASE_SMALL_RED"
+          boundingObject USE BORDER_BASE_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation 4 0 0
+          children [
+            DEF BORDER_BASE_MEDIUM Shape {
+              appearance PBRAppearance {
+                baseColor 0.713726 0.352941 0.129412
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.025 8.025 0.12
+              }
+            }
+          ]
+          name "BORDER_BASE_MEDIUM_BLUE"
+          boundingObject USE BORDER_BASE_MEDIUM
+          locked TRUE
+        }
+        Solid {
+          translation -4 0 0
+          children [
+            DEF BORDER_BASE_MEDIUM Shape {
+              appearance PBRAppearance {
+                baseColor 0.713726 0.352941 0.129412
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.025 8.025 0.12
+              }
+            }
+          ]
+          name "BORDER_BASE_MEDIUM_RED"
+          boundingObject USE BORDER_BASE_MEDIUM
+          locked TRUE
+        }
+        Solid {
+          translation 5.975 0 0
+          children [
+            DEF BORDER_BIGGEST Shape {
+              appearance PBRAppearance {
+                baseColor 0.717647 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.05 12 0.22
+              }
+            }
+          ]
+          name "BORDER_BASE_RED_12_oclk"
+          boundingObject USE BORDER_BIGGEST
+          locked TRUE
+        }
+        Solid {
+          translation 0 -5.975 0
+          rotation 0 0 1 1.570796
+          children [
+            DEF BORDER_BIGGEST Shape {
+              appearance PBRAppearance {
+                baseColor 0.717647 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.05 12 0.22
+              }
+            }
+          ]
+          name "BORDER_BASE_RED_3_oclk"
+          boundingObject USE BORDER_BIGGEST
+          locked TRUE
+        }
+        Solid {
+          translation 0 5.975 0
+          rotation 0 0 1 1.570796
+          children [
+            DEF BORDER_BIGGEST Shape {
+              appearance PBRAppearance {
+                baseColor 0.717647 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.05 12 0.22
+              }
+            }
+          ]
+          name "BORDER_BASE_RED_9_oclk"
+          boundingObject USE BORDER_BIGGEST
+          locked TRUE
+        }
+        Solid {
+          translation -5.975 0 0
+          children [
+            DEF BORDER_BIGGEST Shape {
+              appearance PBRAppearance {
+                baseColor 0.717647 0.352941 0.12549
+                roughness 0.1
+              }
+              geometry Box {
+                size 0.05 12 0.22
+              }
+            }
+          ]
+          name "BORDER_BASE_RED_6_oclk"
+          boundingObject USE BORDER_BIGGEST
+          locked TRUE
+        }
+      ]
+    }
+    DEF 🎢PILLARS🎢 Group {
+      children [
+        DEF Type_1 Group {
+          children [
+            DEF T1_RED_RIGHT Group {
+              children [
+                Solid {
+                  translation -3.2 -3.2 0
+                  children [
+                    DEF T1_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 1.635
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_Transparent(4)"
+                  boundingObject USE T1_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 -3.2 0.81
+                  children [
+                    DEF T1_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.623529 0.509804 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_PLATE(4)"
+                  boundingObject USE T1_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 -3.2 0
+                  children [
+                    DEF T1_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.509804 0.156863
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.46
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_BASEMENT(4)"
+                  boundingObject USE T1_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 -3.2 0
+                  children [
+                    DEF T1_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.02
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T1_PILLAR(4)"
+                  boundingObject USE T1_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T1_BLUE_RIGHT Group {
+              children [
+                Solid {
+                  translation 3.2 3.2 0
+                  children [
+                    DEF T1_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 1.635
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_Transparent(2)"
+                  boundingObject USE T1_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 3.2 0.81
+                  children [
+                    DEF T1_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.623529 0.509804 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_PLATE(2)"
+                  boundingObject USE T1_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 3.2 0
+                  children [
+                    DEF T1_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.509804 0.156863
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.46
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_BASEMENT(2)"
+                  boundingObject USE T1_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 3.2 0
+                  children [
+                    DEF T1_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.02
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T1_PILLAR(2)"
+                  boundingObject USE T1_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T1_RED_LEFT Group {
+              children [
+                Solid {
+                  translation -3.2 3.2 0
+                  children [
+                    DEF T1_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 1.635
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_Transparent(5)"
+                  boundingObject USE T1_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 3.2 0.81
+                  children [
+                    DEF T1_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.623529 0.509804 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_PLATE(5)"
+                  boundingObject USE T1_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 3.2 0
+                  children [
+                    DEF T1_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.509804 0.156863
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.46
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_BASEMENT(5)"
+                  boundingObject USE T1_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 3.2 0
+                  children [
+                    DEF T1_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.02
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T1_PILLAR(5)"
+                  boundingObject USE T1_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T1_BLUE_LEFT Group {
+              children [
+                Solid {
+                  translation 3.2 -3.2 0
+                  children [
+                    DEF T1_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 1.635
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_Transparent(1)"
+                  boundingObject USE T1_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 -3.2 0.81
+                  children [
+                    DEF T1_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.623529 0.509804 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_PLATE(1)"
+                  boundingObject USE T1_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 -3.2 0
+                  children [
+                    DEF T1_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.509804 0.156863
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.46
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_BASEMENT(1)"
+                  boundingObject USE T1_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 -3.2 0
+                  children [
+                    DEF T1_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.02
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T1_PILLAR(1)"
+                  boundingObject USE T1_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T1_RED_CENTER Group {
+              children [
+                Solid {
+                  translation -3.2 0 0
+                  children [
+                    DEF T1_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 1.635
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_Transparent(3)"
+                  boundingObject USE T1_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 0 0.81
+                  children [
+                    DEF T1_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.623529 0.509804 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_PLATE(3)"
+                  boundingObject USE T1_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 0 0
+                  children [
+                    DEF T1_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.509804 0.156863
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.46
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_BASEMENT(3)"
+                  boundingObject USE T1_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation -3.2 0 0
+                  children [
+                    DEF T1_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.02
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T1_PILLAR(3)"
+                  boundingObject USE T1_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T1_BLUE_CENTER Group {
+              children [
+                Solid {
+                  translation 3.2 0 0
+                  children [
+                    DEF T1_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 1.635
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_Transparent"
+                  boundingObject USE T1_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 0 0.81
+                  children [
+                    DEF T1_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.623529 0.509804 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_PLATE"
+                  boundingObject USE T1_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 0 0
+                  children [
+                    DEF T1_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.509804 0.156863
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.46
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T1_BASEMENT"
+                  boundingObject USE T1_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation 3.2 0 0
+                  children [
+                    DEF T1_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.02
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T1_PILLAR"
+                  boundingObject USE T1_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+          ]
+        }
+        DEF Type_2 Group {
+          children [
+            DEF T2_RED_LEFT Group {
+              children [
+                Solid {
+                  translation -1.3 1.3 0
+                  children [
+                    DEF T2_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 2.035
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_Transparent(3)"
+                  boundingObject USE T2_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation -1.3 1.3 1.01
+                  children [
+                    DEF T2_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_PLATE(3)"
+                  boundingObject USE T2_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation -1.3 1.3 0
+                  children [
+                    DEF T2_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.509804 0.164706
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.86
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_BASEMENT(3)"
+                  boundingObject USE T2_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation -1.3 1.3 0
+                  children [
+                    DEF T2_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.513726 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.42
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T2_PILLAR(3)"
+                  boundingObject USE T2_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T2_RED_RIGHT Group {
+              children [
+                Solid {
+                  translation -1.3 -1.3 0
+                  children [
+                    DEF T2_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 2.035
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_Transparent(2)"
+                  boundingObject USE T2_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation -1.3 -1.3 1.01
+                  children [
+                    DEF T2_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_PLATE(2)"
+                  boundingObject USE T2_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation -1.3 -1.3 0
+                  children [
+                    DEF T2_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.509804 0.164706
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.86
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_BASEMENT(2)"
+                  boundingObject USE T2_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation -1.3 -1.3 0
+                  children [
+                    DEF T2_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.513726 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.42
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T2_PILLAR(2)"
+                  boundingObject USE T2_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T2_BLUE_LEFT Group {
+              children [
+                Solid {
+                  translation 1.3 -1.3 0
+                  children [
+                    DEF T2_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 2.035
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_Transparent(1)"
+                  boundingObject USE T2_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation 1.3 -1.3 1.01
+                  children [
+                    DEF T2_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_PLATE(1)"
+                  boundingObject USE T2_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation 1.3 -1.3 0
+                  children [
+                    DEF T2_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.509804 0.164706
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.86
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_BASEMENT(1)"
+                  boundingObject USE T2_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation 1.3 -1.3 0
+                  children [
+                    DEF T2_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.513726 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.42
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T2_PILLAR(1)"
+                  boundingObject USE T2_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+            DEF T2_BLUE_RIGHT Group {
+              children [
+                Solid {
+                  translation 1.3 1.3 0
+                  children [
+                    DEF T2_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 2.035
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_Transparent"
+                  boundingObject USE T2_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  translation 1.3 1.3 1.01
+                  children [
+                    DEF T2_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_PLATE"
+                  boundingObject USE T2_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  translation 1.3 1.3 0
+                  children [
+                    DEF T2_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.509804 0.164706
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.86
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "T2_BASEMENT"
+                  boundingObject USE T2_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  translation 1.3 1.3 0
+                  children [
+                    DEF T2_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.513726 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 2.42
+                        radius 0.05
+                      }
+                    }
+                  ]
+                  name "T2_PILLAR"
+                  boundingObject USE T2_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+          ]
+        }
+        DEF Type_3 Group {
+          children [
+            DEF T3 Group {
+              children [
+                Solid {
+                  translation 0 0 1.61
+                  children [
+                    DEF TYPE_3_PLATE Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.509804 0.164706
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.01
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "TYPE_3_PLATE"
+                  boundingObject USE TYPE_3_PLATE
+                  locked TRUE
+                }
+                Solid {
+                  children [
+                    DEF TYPE_3_BASEMENT Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.615686 0.509804 0.156863
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 0.86
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "TYPE_3_BASEMENT"
+                  boundingObject USE TYPE_3_BASEMENT
+                  locked TRUE
+                }
+                Solid {
+                  children [
+                    DEF TYPE_3_Transparent Shape {
+                      appearance PBRAppearance {
+                        transparency 1
+                      }
+                      geometry Cylinder {
+                        height 3.235
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "TYPE_3_Transparent"
+                  boundingObject USE TYPE_3_Transparent
+                  locked TRUE
+                }
+                Solid {
+                  children [
+                    DEF TYPE_3_PILLAR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.619608 0.505882 0.160784
+                        roughness 0.1
+                      }
+                      geometry Cylinder {
+                        height 3.82
+                        radius 0.075
+                      }
+                    }
+                  ]
+                  name "TYPE_3_PILLAR"
+                  boundingObject USE TYPE_3_PILLAR
+                  locked TRUE
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    DEF 🏰FOUNDATIONS🏰 Group {
+      children [
+        Solid {
+          translation 1.75 0 0
+          children [
+            DEF RED_RING_CENTER Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.745098 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 1 0.423
+              }
+            }
+          ]
+          name "BLUE_RING_CENTER"
+          boundingObject USE RED_RING_CENTER
+          locked TRUE
+        }
+        Solid {
+          translation -1.75 0 0
+          children [
+            DEF RED_RING_CENTER Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.745098 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 1 0.423
+              }
+            }
+          ]
+          name "RED_RING_CENTER"
+          boundingObject USE RED_RING_CENTER
+          locked TRUE
+        }
+        Solid {
+          translation 5.75 -5.75 0
+          children [
+            DEF RING_AREA_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.741176 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 0.5 0.023
+              }
+            }
+          ]
+          name "RING_BLUE_LEFT"
+          boundingObject USE RING_AREA_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation 0.26 5.75 0
+          children [
+            DEF RING_AREA_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.745098 0.741176 0.00392157
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 0.5 0.023
+              }
+            }
+          ]
+          name "RETRY_BLUE"
+          boundingObject USE RING_AREA_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation 5.75 5.75 0
+          children [
+            DEF RING_AREA_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.741176 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 0.5 0.023
+              }
+            }
+          ]
+          name "RING_BLUE_RIGHT"
+          boundingObject USE RING_AREA_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation -5.75 5.75 0
+          children [
+            DEF RING_AREA_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.741176 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 0.5 0.023
+              }
+            }
+          ]
+          name "RING_RED_LEFT"
+          boundingObject USE RING_AREA_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation -0.25 -5.75 0
+          children [
+            DEF RING_AREA_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.741176 0
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 0.5 0.023
+              }
+            }
+          ]
+          name "RETRY_RED"
+          boundingObject USE RING_AREA_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation -5.75 -5.75 0
+          children [
+            DEF RING_AREA_SMALL Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.741176 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.5 0.5 0.023
+              }
+            }
+          ]
+          name "RING_RED_RIGHT"
+          boundingObject USE RING_AREA_SMALL
+          locked TRUE
+        }
+        Solid {
+          translation 5.5 0 0
+          children [
+            DEF RED_START_ZONE Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 1 1.5 0.023
+              }
+            }
+          ]
+          name "BLUE_START_ZONE"
+          boundingObject USE RED_START_ZONE
+          locked TRUE
+        }
+        Solid {
+          translation -5.5 0 0
+          children [
+            DEF RED_START_ZONE Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0 0
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 1 1.5 0.023
+              }
+            }
+          ]
+          name "RED_START_ZONE"
+          boundingObject USE RED_START_ZONE
+          locked TRUE
+        }
+        Solid {
+          translation 0.4875 3.67 0.02
+          rotation 1 0 0 -0.32175
+          children [
+            DEF BRIDGE_RED Shape {
+              appearance PBRAppearance {
+                baseColor 0.341176 0.345098 0.345098
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.975 0.63246 0.18974
+              }
+            }
+          ]
+          name "BRIDGE_BLUE"
+          boundingObject USE BRIDGE_RED
+          locked TRUE
+        }
+        Solid {
+          translation -0.4875 -3.67 0.02
+          rotation 1 0 0 0.32175
+          children [
+            DEF BRIDGE_RED Shape {
+              appearance PBRAppearance {
+                baseColor 0.341176 0.345098 0.345098
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 0.975 0.63246 0.18974
+              }
+            }
+          ]
+          name "BRIDGE_RED"
+          boundingObject USE BRIDGE_RED
+          locked TRUE
+        }
+        Solid {
+          children [
+            DEF MOAT_AREA_ Shape {
+              appearance PBRAppearance {
+                baseColor 0.262745 0.584314 0.745098
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 7.98 7.98 0.023
+              }
+            }
+          ]
+          name "MOAT_AREA"
+          boundingObject USE MOAT_AREA_
+          locked TRUE
+        }
+        Solid {
+          translation 3 0 0
+          children [
+            DEF ANGKOR_BASE_RED Shape {
+              appearance PBRAppearance {
+                baseColor 0.415686 0.67451 0.745098
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 6 12 0.02
+              }
+            }
+          ]
+          name "ANGKOR_BASE_BLUE"
+          boundingObject USE ANGKOR_BASE_RED
+          locked TRUE
+        }
+        Solid {
+          translation -3 0 0
+          children [
+            DEF ANGKOR_BASE_RED Shape {
+              appearance PBRAppearance {
+                baseColor 0.745098 0.380392 0.345098
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 6 12 0.02
+              }
+            }
+          ]
+          name "ANGKOR_BASE_RED"
+          boundingObject USE ANGKOR_BASE_RED
+          locked TRUE
+        }
+        Solid {
+          translation 1.7 0 0
+          children [
+            DEF ANGKOR_RED Shape {
+              appearance PBRAppearance {
+                baseColor 0.411765 0.67451 0.741176
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 3.4 6.8 0.42
+              }
+            }
+          ]
+          name "ANGKOR_BLUE"
+          boundingObject USE ANGKOR_RED
+          locked TRUE
+        }
+        Solid {
+          translation -1.7 0 0
+          children [
+            DEF ANGKOR_RED Shape {
+              appearance PBRAppearance {
+                baseColor 0.741176 0.376471 0.34902
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 3.4 6.8 0.42
+              }
+            }
+          ]
+          name "ANGKOR_RED"
+          boundingObject USE ANGKOR_RED
+          locked TRUE
+        }
+        Solid {
+          children [
+            DEF ANGKOR_CENTER Shape {
+              appearance PBRAppearance {
+                baseColor 0.713726 0.34902 0.121569
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Box {
+                size 3 3 0.82
+              }
+            }
+          ]
+          name "ANGKOR_CENTER_AREA"
+          boundingObject USE ANGKOR_CENTER
+          locked TRUE
+        }
+      ]
+    }
+  ]
+}
+DEF 🧪TEST_SUBJECTS🧪 Group {
+  children [
+    RubberDuck {
+      translation 0.3 3.7 8
+      rotation 8.291102444265097e-09 -1 -1.1060655231766324e-09 0.08249048215646357
+      name "rubber duck(6)"
+    }
+    RubberDuck {
+      translation 2.5 0 8
+      rotation 8.291102444265097e-09 -1 -1.1060655231766324e-09 0.08249048215646357
+      name "rubber duck(2)"
+    }
+    RubberDuck {
+      translation 4.5 0 8
+      rotation 8.291102444265097e-09 -1 -1.1060655231766324e-09 0.08249048215646357
+      name "rubber duck(4)"
+    }
+    RubberDuck {
+      translation -4.5 0 8
+      rotation 8.291102444265097e-09 -1 -1.1060655231766324e-09 0.08249048215646357
+      name "rubber duck(3)"
+    }
+    RubberDuck {
+      translation -3.8 0 8
+      rotation 8.291102444265097e-09 -1 -1.1060655231766324e-09 0.08249048215646357
+      name "rubber duck(5)"
+    }
+    RubberDuck {
+      translation -2.5 0 8
+      rotation 8.291102444265097e-09 -1 -1.1060655231766324e-09 0.08249048215646357
+      name "rubber duck(1)"
+    }
+    RubberDuck {
+      translation 0 0 8
+      rotation 8.291102444265097e-09 -1 -1.1060655231766324e-09 0.08249048215646357
+    }
+    E-puck {
+      translation -5.8 0 0.05
+      rotation 0 0 1 2
+      name "鸭鸭宝宝🐣"
+    }
+    E-puck {
+      translation 0.3 -4.2 0.15
+      rotation 0 0 1 2
+      name "鸭鸭宝宝🐥"
+    }
+    E-puck {
+      translation -0.51823 -3.7968 0.25
+      rotation 0 0 1 1.0708
+      name "鸭鸭宝宝🐤"
+    }
+    E-puck {
+      translation -0.160338 -1.93248 0.35
+      rotation 0 0 -1 -0.5472053071795866
+      name "鸭鸭宝宝🐦"
+    }
+    Pedestrian {
+      translation -6.5 0 1.27
+      name "Thong Xiang 🙉"
+    }
+  ]
+}
+DEF 🍩TEST_RINGS🍩 Group {
+  children [
+    DEF Rings SolidTorus {
+      translation -1.3 1.3 1.5
+      rotation 0 1 0 0.3
+      name "R01(2)"
+      majorRadius 0.107
+      minorRadius 0.007
+      appearance PBRAppearance {
+        baseColor 0.256077 0.372778 0.801465
+        roughness 0.3
+        metalness 0
+      }
+      physics Physics {
+      }
+    }
+    DEF Rings SolidTorus {
+      translation 3.2 0 1.5
+      rotation 0 -1 0 0.238201
+      name "R01(4)"
+      majorRadius 0.107
+      minorRadius 0.007
+      appearance PBRAppearance {
+        baseColor 0.256077 0.372778 0.801465
+        roughness 0.3
+        metalness 0
+      }
+      physics Physics {
+      }
+    }
+    DEF Rings SolidTorus {
+      translation 1.4 -1.3 1.5
+      rotation 0 1 0 1.7
+      name "R01(3)"
+      majorRadius 0.107
+      minorRadius 0.007
+      appearance PBRAppearance {
+        baseColor 0.256077 0.372778 0.801465
+        roughness 0.3
+        metalness 0
+      }
+      physics Physics {
+      }
+    }
+    DEF Rings SolidTorus {
+      translation 1.4 1.3 1.5
+      rotation 0 1 0 0.3
+      name "R01(1)"
+      majorRadius 0.107
+      minorRadius 0.007
+      appearance PBRAppearance {
+        baseColor 0.256077 0.372778 0.801465
+        roughness 0.3
+        metalness 0
+      }
+      physics Physics {
+      }
+    }
+    DEF Rings SolidTorus {
+      translation 0.1 0 2.5
+      rotation 0 1 0 0.1
+      name "R01"
+      majorRadius 0.107
+      minorRadius 0.007
+      appearance PBRAppearance {
+        baseColor 0.256077 0.372778 0.801465
+        roughness 0.3
+        metalness 0
+      }
+      physics Physics {
+      }
+    }
+  ]
+}
